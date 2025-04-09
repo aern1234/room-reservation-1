@@ -200,13 +200,52 @@ try {
                 </a>
             <?php } ?>
         </div>
-        <div class="row justify-content-center">
-        <div class="col-md-6 text-center">
-            <blockquote class="tiktok-embed" cite="YOUR_TIKTOK_URL_HERE" data-video-id="YOUR_VIDEO_ID" style="max-width: 605px; min-width: 325px;">
+        <div class="row justify-content-center mb-4">
+        <!-- TikTok Video 1 -->
+        <div class="col-md-6 col-lg-5 mb-4">
+        <div class="tiktok-container">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@staffbankhunseua_camping/video/7486332828473380104" data-video-id="7486332828473380104">
                 <section></section>
             </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
         </div>
+        </div>
+        
+        <!-- TikTok Video 2 -->
+        <div class="col-md-6 col-lg-5 mb-4">
+        <div class="tiktok-container">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@staffbankhunseua_camping/video/7485641289992703240" data-video-id="/7485641289992703240">
+                <section></section>
+            </blockquote>
+        </div>
+        </div>
+        
+        <!-- TikTok Video 3 -->
+        <div class="col-md-6 col-lg-5 mb-4">
+        <div class="tiktok-container">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@staffbankhunseua_camping/video/7489062603147332882" data-video-id="7489062603147332882">
+                <section></section>
+            </blockquote>
+        </div>
+        </div>
+        
+        <!-- TikTok Video 4 -->
+        <div class="col-md-6 col-lg-5 mb-4">
+        <div class="tiktok-container">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@staffbankhunseua_camping/video/7481163954060791047" data-video-id="7481163954060791047">
+                <section></section>
+            </blockquote>
+        </div>
+        </div>
+        
+        <!-- TikTok Video 5 -->
+        <!-- <div class="col-md-6 col-lg-5 mb-4">
+        <div class="tiktok-container">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@staffbankhunseua_camping/video/7428243099438026002" data-video-id="7428243099438026002">
+                <section></section>
+            </blockquote>
+        </div>
+        </div> -->
+        <script async src="https://www.tiktok.com/embed.js"></script>
     </div>
         <div class="row my-3">
             <?php foreach ($row as $r) { ?>
@@ -269,10 +308,30 @@ try {
         transform: scale(1.05);
         transition: all 0.3s ease-in-out;
     }
-    .tiktok-embed {
+    .tiktok-container {
+        width: 200px; /* Decreased width for each TikTok embed */
+        margin-bottom: 20px;
+    }
+    
+    /* Style for TikTok embeds */
+    .tiktok-container {
+        width: 100%;
+        max-width: 340px;
         margin: 0 auto;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
+    }
+    
+    /* Style for TikTok embeds */
+    .tiktok-embed {
+        max-width: 100%;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
         overflow: hidden;
+    }
+    
+    /* Make sure videos stay responsive on mobile */
+    @media (max-width: 767px) {
+        .tiktok-container {
+            max-width: 300px;
+        }
     }
 </style>

@@ -9,7 +9,7 @@ $row = getDataById($sql, []);
             <div class="col-md-4">
 
                 <?php if ($logo_type == 'logoImage') { ?>
-                    <img class="rounded-circle" src="<?php echo $logo_dir ?>?" style="width: 50px;height:50px;object-fit:contain;">
+                    <img class="rounded-circle" src="<?php echo $logo_dir ?>?" style="width: 70px;height:70px;object-fit:contain;">
                 <?php  } else {
                     echo $logo;
                 } ?>

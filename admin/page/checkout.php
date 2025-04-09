@@ -79,13 +79,12 @@ $route_params = get_params_isNotEmpty(['r' => $r, 'start_dt' => $start_dt]);
                             <?php
                             $today = date('Y-m-d');
                             $reservation_end = date('Y-m-d', strtotime($r['end_dt']));
-                            if ($reservation_end == $today) {
+                            $disabled = ($reservation_end != $today) ? 'disabled' : ''; // Check condition and set the disabled attribute
                             ?>
-                                <button name="reserv-checkout" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm m-1 bg-lightblue">
-                                    <i class="fa-solid fa-angles-left"></i>
-                                    <strong>checkout</strong>
-                                </button>
-                            <?php } ?>
+                            <button name="reserv-checkout" data-id="<?php echo $r['reservation_id'] ?>" class="btn btn-sm m-1 bg-lightblue" <?php echo $disabled; ?>>
+                                <i class="fa-solid fa-angles-left"></i>
+                                <strong>checkout</strong>
+                            </button>
 
 
                         </td>
